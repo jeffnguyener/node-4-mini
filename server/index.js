@@ -17,6 +17,7 @@ app.use(session({
 }))
 
 app.get('/api/messages', mc.getAllMessages)
+app.get('/api/messages/history', mc.history)
 app.post('/api/message', mc.createMessage)
 
 app.listen(SERVER_PORT, () => console.log(`Running on port ${SERVER_PORT}`))
